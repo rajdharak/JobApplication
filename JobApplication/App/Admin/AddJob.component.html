@@ -1,0 +1,17 @@
+﻿
+<form (ngSubmit)="onSubmit(job)" role="form" #AddForm="ngForm">
+    <div>
+        Name:<input #Name="ngForm" type="text" class="form-control" [(ngModel)]="job.JobName" ngControl="Name" /><br />
+    </div>
+    <div>
+        Description:<input #Description="ngForm" class="form-control" type="text" [(ngModel)]="job.Description" ngControl="Description" /><br />
+    </div>
+    <div>
+        Positions:<input #Positions="ngForm" class="form-control" type="text" [(ngModel)]="job.Positions" ngControl="Positions" /><br />
+    </div>
+  
+    <input class="btn btn-success" type="submit" value="Submit" />
+    <!--<a class="btn btn-success" [routerLink]="['/listproduct']">Back To List</a>-->
+    <!--<button class="btn-info" (click)="close()">Close</button>-->
+</form>
+<br />

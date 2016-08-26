@@ -1,0 +1,12 @@
+﻿
+<form (ngSubmit)="onSubmit(job)" role="form" #AddForm="ngForm">
+    <div>
+        GitHubUrl:<input #Name="ngForm" type="text" class="form-control" [(ngModel)]="job.JobName" ngControl="Name" /><br />
+    </div>
+    <div>
+        Resume:<input (change)="ResumeUpload($event)" class="btn-file" type="file" #Data="ngForm" [(ngModel)]="productMedia.Data" ngControl="Data" id="Data" accept="image/*" />    </div>
+    <input class="btn btn-success" type="submit" value="Submit" />
+    <!--<a class="btn btn-success" [routerLink]="['/listproduct']">Back To List</a>-->
+    <!--<button class="btn-info" (click)="close()">Close</button>-->
+</form>
+<br />

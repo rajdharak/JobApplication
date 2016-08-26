@@ -1,0 +1,32 @@
+﻿
+<div class='table'>
+    <table class='table-responsive'>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Positions</th>
+            <th>PositionsLeft</th>
+            <th>Apply</th>
+          
+        </tr>
+        <tr *ngFor='let job of jobs'>
+            <td>
+                {{job.JobName}}
+            </td>
+            <td>
+                {{job.Description}}
+            </td>
+            <td>
+                {{job.Positions}}
+            </td>
+            <td>
+                {{job.PositionsLeft}}
+            </td>
+            <td>
+                <a class="btn btn-success" [routerLink]="['/apply']">Apply</a>
+                <router-outlet></router-outlet>
+            </td>
+       
+        </tr>
+    </table>
+</div>
